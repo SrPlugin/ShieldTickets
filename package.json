@@ -1,12 +1,27 @@
 {
-  "name": "shieldtickets",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"name": "shieldtickets",
+	"author": "Sebastian Cheikh",
+	"version": "1.0.0",
+	"description": "A bot for managing tickets",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "bun build ./src/index.ts --outdir ./dist --target bun --minify",
+		"start": "bun run src/index.ts",
+		"start:dev": "bun run src/index.ts --watch",
+		"lint": "bunx --bun @biomejs/biome check --write"
+	},
+	"module": "index.ts",
+	"type": "module",
+	"private": false,
+	"devDependencies": {
+		"@biomejs/biome": "2.4.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"seyfert": "^4.2.2"
+	}
 }
